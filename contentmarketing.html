@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Content Marketing</title>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- Optional theme (you can add if you want) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- AOS Animate on Scroll CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        .btn-sm-square:hover {
+            background-color: rgb(16, 190, 217) !important;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link:active,
+        .navbar-nav .nav-link:focus,
+        .navbar-nav .nav-link.show,
+        .navbar-nav .dropdown-item:active {
+            color: white !important;
+            background-color: inherit;
+            /* Keep background unchanged if needed */
+        }
+
+        .dropdown-item:hover {
+            color: rgb(0, 0, 255) !important;
+        }
+
+        .about-img img.animated {
+            box-shadow: 0 0 25px rgba(0, 123, 255, 0.6);
+            /* Blue glow */
+            transition: box-shadow 0.6s ease-in-out;
+        }
+
+        .fa {
+            color: #06a3ec !important;
+            /* Bootstrap primary blue */
+        }
+
+        .testimonial-item i.fa-star {
+            color: #06a3ec !important;
+        }
+
+        /* services section */
+        .feature-item {
+            background-image: url('img/bg-pattern.jpg');
+            /* Replace with your desired background image */
+            background-size: cover;
+            background-position: center;
+            transition: background-size 0.5s ease, transform 0.5s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-item::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            /* Optional white overlay */
+            z-index: -1;
+            transition: opacity 0.5s ease;
+        }
+
+        .feature-item:hover {
+            background-size: 110%;
+            transform: scale(1.02);
+        }
+
+        .feature-item:hover::before {
+            opacity: 0.1;
+        }
+
+        /* Text color changes to white on hover */
+        .feature-item:hover h5,
+        .feature-item:hover p {
+            color: white !important;
+        }
+
+        /* Change square background to dark blue on hover */
+        .feature-item:hover .feature-icon {
+            background-color: #003366 !important;
+            /* Dark blue */
+            transition: background-color 0.5s ease;
+        }
+
+        /* testimonial */
+        /* Testimonial Section Styling */
+        section.py-5.bg-light {
+            background: linear-gradient(135deg, #e0f0ff 0%, #5091d1 100%);
+            font-family: 'Poppins', sans-serif;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            animation: fadeInSection 1s ease forwards;
+        }
+
+        @keyframes fadeInSection {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section h2 {
+            font-weight: 700;
+            color: #0d6efd;
+            letter-spacing: 1.5px;
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(13, 110, 253, 0.3);
+            font-size: 2.75rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        section h2::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: #f2f2f3;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 18px;
+            background: linear-gradient(135deg, white 0%, white 100%);
+            box-shadow:
+                0 8px 20px rgba(13, 110, 253, 0.12),
+                inset 0 0 12px #f0f8ff88;
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease,
+                background 0.4s ease,
+                box-shadow 0.4s ease;
+            padding: 2.5rem 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            cursor: default;
+            position: relative;
+            opacity: 0;
+            animation: fadeInCard 0.8s ease forwards;
+        }
+
+        @keyframes fadeInCard {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            background: linear-gradient(135deg, white 0%, white 100%);
+            box-shadow:
+                0 20px 45px rgba(13, 110, 253, 0.35),
+                0 0 25px rgba(13, 110, 253, 0.3),
+                inset 0 0 15px #d6e6ff99;
+        }
+
+        .card:hover p {
+            transform: scale(1.03);
+            color: #1a1a1a;
+        }
+
+        .card .d-flex {
+            margin-bottom: 1.5rem;
+            align-items: center;
+            border-bottom: 1px solid #0d6efd33;
+            padding-bottom: 1rem;
+        }
+
+        .rounded-circle {
+            border: 3px solid #0d6efd;
+            padding: 3px;
+            box-sizing: content-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 6px rgba(13, 110, 253, 0.15);
+        }
+
+        .card:hover .rounded-circle {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+        }
+
+        .card h5 {
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 0.25rem;
+            letter-spacing: 0.5px;
+        }
+
+        .card small.text-muted {
+            font-weight: 600;
+            color: #0d6efd;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            line-height: 1.75;
+            color: #212529;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 2.5rem;
+            font-style: italic;
+            transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            font-weight: 400;
+        }
+
+        .card p::before {
+            content: "\201C";
+            font-size: 3rem;
+            color: #0d6efd;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.25;
+            font-family: 'Georgia', serif;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover p::before {
+            opacity: 0.35;
+        }
+
+        .card::after {
+            content: "★★★★★";
+            color: #0d6efd;
+            font-size: 1.3rem;
+            position: absolute;
+            bottom: 1.5rem;
+            right: 2rem;
+            letter-spacing: 2px;
+            opacity: 0.3;
+            user-select: none;
+            transition: opacity 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+            animation: starPulse 4s infinite ease-in-out;
+        }
+
+        .card:hover::after {
+            opacity: 0.6;
+            text-shadow: 0 0 8px #0d6efd;
+            transform: scale(1.1);
+        }
+
+        @keyframes starPulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .card {
+                padding: 1.8rem 1.5rem;
+            }
+
+            section h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* trusted by */
+        .logo-img {
+            max-height: 90px;
+            width: auto;
+            object-fit: contain;
+            padding: 18px;
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid #e6e6e6;
+            transition: all 0.4s cubic-bezier(0.45, 0, 0.2, 1);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            filter: grayscale(70%) brightness(0.95);
+            opacity: 0.85;
+            cursor: pointer;
+            backdrop-filter: blur(2px);
+        }
+
+        .logo-img:hover {
+            transform: scale(1.1) translateY(-6px);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15), 0 0 10px rgba(6, 163, 236, 0.1);
+            filter: grayscale(0%) brightness(1.08);
+            opacity: 1;
+            border-color: #06a3ec;
+            background: linear-gradient(135deg, #ffffff, #f8fafd);
+        }
+
+        /* <!-- Android App Development Page (Modernized Look) --> */
+        .icon-box {
+            background: linear-gradient(145deg, #f0f0f0, #ffffff);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            width: 80px;
+            height: 80px;
+        }
+
+        .icon-box:hover {
+            transform: scale(1.1);
+        }
+
+        .icon-box i {
+            font-size: 2.5rem;
+        }
+
+        /* benefit */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .section-title span {
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #0dcaf0, #6610f2);
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        .benefit-card {
+            background: #ffffff;
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 30px 25px;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon-circle {
+            background: linear-gradient(135deg, #0dcaf0, #6610f2);
+            color: #fff;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card h5 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #212529;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .benefit-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 576px) {
+            .benefit-card h5 {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .hover-highlight {
+            transition: background 0.3s ease, transform 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 0.75rem;
+        }
+
+        .hover-highlight:hover {
+            background: rgba(13, 110, 253, 0.05);
+            transform: translateX(5px);
+        }
+
+        .backdrop-blur-lg {
+            backdrop-filter: blur(10px);
+        }
+
+        .content-img {
+            max-height: 550px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .content-list small {
+            font-size: 1rem;
+            color: #495057;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .section-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title span {
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #00bfff;
+            margin: 10px auto;
+        }
+
+        .benefit-card {
+            background-color: #1e2a4a;
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            min-height: 250px;
+        }
+
+        .benefit-card h5 {
+            color: #1ec0ff;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .benefit-card h5 i {
+            font-size: 1.2rem;
+            margin-right: 10px;
+            color: #1ec0ff;
+        }
+
+        .benefit-card p {
+            font-size: 0.95rem;
+            color: #d9e2ec;
+        }
+    </style>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/Logo/favicon-removebg-preview.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+     <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-grey text-dark d-none d-lg-flex wow fadeIn" data-wow-delay="0.1s"
+        style="border-bottom: 1px solid #ddd;">
+        <div class="container py-2">
+            <div class="d-flex align-items-center">
+                <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                    <img src="img/Logo/logo-removebg-preview.png" alt="Logo" style="width: 120px; height: auto;">
+                </a>
+                <div class="ms-auto d-flex align-items-center">
+                    <small class="d-flex align-items-center" style="font-size: 0.9rem;">
+                        <i class="fa fa-envelope me-2" aria-hidden="true"></i>
+                        <a href="mailto:info@engeniuspark.com"
+                            style="color: black; text-decoration: none;">contact@absys.co.in</a>
+                    </small>
+
+                    <div class="ms-4 d-flex align-items-center">
+                        <a target="_blank" class="btn btn-sm-square btn-light btn-facebook ms-2"
+                            href="https://www.facebook.com/engeniuspark" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a target="_blank" class="btn btn-sm-square btn-light btn-twitter ms-2"
+                            href="https://x.com/EngeniusPark" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a target="_blank" class="btn btn-sm-square btn-light btn-linkedin ms-2"
+                            href="https://www.linkedin.com/company/engeniuspark/posts/?feedView=all"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a target="_blank" class="btn btn-sm-square btn-light btn-whatsapp ms-2"
+                            href="https://wa.me/+917588619361" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a target="_blank" class="btn btn-sm-square btn-light btn-instagram ms-2"
+                            href="https://www.instagram.com/_estpl_/" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+                <a href="index.html" class="navbar-brand d-lg-none">
+                    <h1 class="fw-bold m-0"></h1>
+                    <img src="img/navbar_LOGO-removebg-preview.png" alt="">
+                </a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <!-- About us  -->
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="about.html" class="dropdown-item">About Company</a>
+                                <a href="mission.html" class="dropdown-item">Mission & Vision</a>
+                                <a href="aboutfounder.html" class="dropdown-item">About Founders</a>
+                                <a href="LifeAtAbsys.html" class="dropdown-item">Life At Absys</a>
+
+                            </div>
+                        </div>
+                        
+                        <!-- Services Mega Menu -->
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu w-100 mt-0 border-0 shadow-lg mega-dropdown p-4"
+                                aria-labelledby="servicesDropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <!-- Mobile Application -->
+                                        <div class="col-md-3">
+                                            <h6 class="text-uppercase fw-bold" style="color: rgb(42, 196, 235);">MOBILE APPLICATION</h6>
+                                            <hr class="dropdown-divider bg-primary" style="width: 40px;">
+                                            <a class="dropdown-item" href="androidapp.html">Android App</a>
+                                            <a class="dropdown-item" href="iosApp.html">Ios App</a>
+                                            <a class="dropdown-item" href="Hybrid.html">Hybrid App</a>
+                                        </div>
+
+                                        <!-- Web Application -->
+                                        <div class="col-md-3">
+                                            <h6 class="text-uppercase fw-bold" style="color: rgb(42, 196, 235);">WEB APPLICATION</h6>
+                                            <hr class="dropdown-divider bg-primary" style="width: 40px;">
+                                            <a class="dropdown-item" href="webapp.html">Website Development</a>
+                                        </div>
+
+                                        <!-- Technologies -->
+                                        <div class="col-md-3">
+                                            <h6 class="text-uppercase fw-bold" style="color: rgb(42, 196, 235);">TECHNOLOGIES</h6>
+                                            <hr class="dropdown-divider bg-primary" style="width: 40px;">
+                                            <a class="dropdown-item" href="SAPtech.html">SAP</a>
+                                        </div>
+
+                                        <!-- Digital Marketing -->
+                                        <div class="col-md-3">
+                                            <h6 class="text-uppercase fw-bold" style="color: rgb(42, 196, 235);">DIGITAL MARKETING</h6>
+                                            <hr class="dropdown-divider bg-primary" style="width: 40px;">
+                                            <a class="dropdown-item" href="SEO.html">Search Engine Optimization</a>
+                                            <a class="dropdown-item" href="googleAdwords.html">Google Adwords PPC</a>
+                                            <a class="dropdown-item" href="socialmedia.html">Social Media Marketing</a>
+                                            <a class="dropdown-item" href="searchenginemarketing.html">Search Engine Marketing</a>
+                                            <a class="dropdown-item" href="acceleratedlanding.html">Accelerated Landing Pages</a>
+                                            <a class="dropdown-item" href="leadgeneration.html">Business Lead Generation</a>
+                                            <a class="dropdown-item" href="affiliateMarketing.html">Affiliate Marketing</a>
+                                            <a class="dropdown-item" href="emailMarketing.html">Email Marketing</a>
+                                            <a class="dropdown-item" href="contentmarketing.html">Content Marketing</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <!-- Ai -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Platform</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="D2C.html" class="dropdown-item">D2C</a>
+                            </div>
+                        </div>
+                        <!-- Aviation -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Aviation</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="smartAirportsolution.html" class="dropdown-item">Smart Airport Solutions</a>
+                            </div>
+                        </div>
+                        <!-- Contact Details -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact Details</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="contactUS.html" class="dropdown-item">Contact Us</a>
+                                <a href="media.html" class="dropdown-item">Media</a>
+                                <a href="events.html" class="dropdown-item">Events</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--career  -->
+                    <div class="ms-auto d-none d-lg-block">
+                        <a href="career.html" class="btn btn-primary py-2 px-3 border-0">CAREER</a>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header pt-5 mb-6 wow fadeIn d-flex align-items-center justify-content-center"
+        data-wow-delay="0.1s"
+        style="background: url('img/contentmarketing/Content-Marketing-Banner-01.png') center center / cover no-repeat; height: 70vh;">
+        <div class="container text-center">
+            <!-- <h1 class="display-4 text-white mb-4">ABOUT US</h1> -->
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- About Start -->
+    <div class="container-fluid pt-6 pb-6">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img" style="width: 100%; display: flex; justify-content: center;">
+                        <!-- add video here -->
+                        <img src="img/contentmarketing/about-content-marketing-strategy.jpg" alt="iOS App"
+                            class="img-fluid" style="width: auto; height: 400px;">
+
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 style="color: #0d6efd;" class="display-6 mb-4">Content Marketing</h1>
+                    <p style="color: black;">We develop strategic, targeted content that aligns with your brand and
+                        engages your ideal audience across platforms.</p>
+                    <p style="color: black;">Our approach focuses on storytelling, SEO optimization, and consistent
+                        messaging to boost visibility and trust.</p>
+                    <p style="color: black;">From blog articles and social media posts to infographics and video
+                        scripts, we create content that converts.</p>
+                    <p style="color: black;">We analyze performance metrics to continuously refine your content strategy
+                        and maximize ROI.</p>
+                    <p style="color: black;">Whether you’re launching a new campaign or strengthening your brand voice,
+                        our content marketing solutions drive results.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- About End -->
+
+
+
+    <!-- Content Marketing Process Section (Enhanced Layout) -->
+    <section id="web-services" class="position-relative py-5"
+        style="background: linear-gradient(135deg, #f8f9fa, #cfdeee); overflow: hidden;">
+        <!-- Decorative Background Element -->
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+            style="background: radial-gradient(circle at top left, rgba(13, 110, 253, 0.08), transparent 60%); transform: rotate(5deg); z-index: 0;">
+        </div>
+
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="text-center mb-5" data-aos="fade-down">
+                <h1 class="display-5 fw-bold text-primary">Our Content Marketing Process</h1>
+                <p class="text-muted fs-5">Plan, create, and distribute content that fuels brand growth and audience
+                    engagement.</p>
+            </div>
+
+            <div class="row align-items-center gy-5 gx-lg-5 flex-column">
+                <!-- Image Content -->
+                <div class="col-12 text-center" data-aos="fade-right">
+                    <img src="img/contentmarketing/content_marketing-removebg-preview.png" alt="Content Marketing"
+                        class="img-fluid ">
+                </div>
+
+                <!-- Text Content (now below the image) -->
+                <div class="col-12" data-aos="fade-left">
+                    <div
+                        class="bg-white bg-opacity-75 backdrop-blur-lg border border-light rounded-4 shadow-lg p-4 p-md-5">
+                        <ul class="list-unstyled fs-5 mb-0 text-start content-list">
+                            <li class="mb-4 d-flex align-items-start hover-highlight">
+                                <i class="bi bi-pencil-square text-primary fs-4 me-3"></i>
+                                <div><strong>Strategy Development:</strong><br><small>We analyze your audience and goals
+                                        to create a customized content plan.</small></div>
+                            </li>
+                            <li class="mb-4 d-flex align-items-start hover-highlight">
+                                <i class="bi bi-journal-text text-primary fs-4 me-3"></i>
+                                <div><strong>Content Creation:</strong><br><small>Blogs, visuals, and media tailored to
+                                        fit your brand and message.</small></div>
+                            </li>
+                            <li class="mb-4 d-flex align-items-start hover-highlight">
+                                <i class="bi bi-graph-up-arrow text-primary fs-4 me-3"></i>
+                                <div><strong>SEO Optimization:</strong><br><small>Optimized content to boost
+                                        discoverability and rank higher in search engines.</small></div>
+                            </li>
+                            <li class="mb-4 d-flex align-items-start hover-highlight">
+                                <i class="bi bi-share text-primary fs-4 me-3"></i>
+                                <div><strong>Content Distribution:</strong><br><small>Targeted publishing across the
+                                        right platforms to expand your reach.</small></div>
+                            </li>
+                            <li class="d-flex align-items-start hover-highlight">
+                                <i class="bi bi-bar-chart-line text-primary fs-4 me-3"></i>
+                                <div><strong>Performance Analytics:</strong><br><small>Track, measure, and optimize
+                                        content to drive better ROI.</small></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+
+
+
+    <!-- Benefits Section -->
+    <div class="container py-5">
+        <h2 class="section-title">
+            Benefit our Content Marketing Services
+            <span></span>
+        </h2>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-6">
+                <div class="benefit-card text-center text-md-start">
+                    <div class="icon-circle mx-md-0 mx-auto"><i class="bi bi-search"></i></div>
+                    <h5>Higher visibility in search engines.</h5>
+                    <p>Every new post you add to your blog is another page that Google's going to index.
+                        Quality indexed pages can grant you more opportunities to rank for more search
+                        queries.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="benefit-card text-center text-md-start">
+                    <div class="icon-circle mx-md-0 mx-auto"><i class="bi bi-bar-chart-line"></i></div>
+                    <h5>Increased conversion potential</h5>
+                    <p>Engage, inform, and help your readers — then softly pitch your offerings. This
+                        approach significantly boosts your chances of converting visitors into customers.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="benefit-card text-center text-md-start">
+                    <div class="icon-circle mx-md-0 mx-auto"><i class="bi bi-award"></i></div>
+                    <h5>Higher domain authority</h5>
+                    <p>Publishing high-quality content builds trust and relevance. Earning inbound links
+                        from reputable sources will increase your site's domain authority.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="benefit-card text-center text-md-start">
+                    <div class="icon-circle mx-md-0 mx-auto"><i class="bi bi-currency-dollar"></i></div>
+                    <h5>Content marketing drives more sales</h5>
+                    <p>Customers need time before they’re ready to purchase. Content nurtures leads
+                        throughout this journey, increasing the likelihood of future sales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <img src="img/Logo/footer-removebg-preview.png" alt="" width="120" class="mb-4">
+                    <p class="mb-2" style="justify-content: center;">We Have A Dream, A Dream to Achieve
+                        Excellence.
+                        Industries grow with developments and advancements. Our experienced and expert team
+                        excels in
+                        every domain and delivers you deep insights on your project before the actual work
+                        starts.</p>
+                    <div class="ms-3 d-flex align-items-left">
+                        <a target="_blank" class="social-icon ms-2" href="https://www.facebook.com/engeniuspark"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a target="_blank" class="social-icon ms-2" href="https://x.com/EngeniusPark"><i
+                                class="fab fa-twitter"></i></a>
+                        <a target="_blank" class="social-icon ms-2"
+                            href="https://www.linkedin.com/company/engeniuspark/posts/?feedView=all"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" class="social-icon ms-2" href="https://www.instagram.com/engeniuspark"><i
+                                class="fab fa-instagram"></i></a>
+                        <a target="_blank" class="social-icon ms-2" href="https://wa.me/+917588619361"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="about.html">About us</a>
+                    <a class="btn btn-link" href="service.html">Services</a>
+                    <a class="btn btn-link" href="D2C.html">Platform</a>
+                    <a class="btn btn-link" href="smartAirportsolution.html">Aviation</a>
+                    <a class="btn btn-link" href="career.html">Career</a>
+                    <a class="btn btn-link" href="privacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="terms&condition.html">Terms & Conditions</a>
+                    <a class="btn btn-link" href="SAPtech.html">SAP</a>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <h5 class="text-uppercase text-light mb-4">Pune | Nashik</h5>
+
+                    <!-- India Office -->
+                    <div class="mb-4">
+                        <p class="mb-2 text-white fw-bold"><i class="fa fa-map-marker-alt text-primary me-3"></i>Head
+                            Office | Pune</p>
+                        <p class="text-uppercase mb-0 text-white">
+                            207, A- wing, Jai Ganesh Vision, Akurdi Chowk, Akurdi, Pune 411 035.
+                        </p>
+                    </div>
+
+                    <!-- USA Office -->
+                    <div class="mb-4">
+                        <p class="mb-2 text-white fw-bold"><i class="fa fa-map-marker-alt text-primary me-3"></i>
+                            Office
+                            | Nashik</p>
+                        <p class="text-uppercase mb-0 text-white">
+                            Office No 304 , Shreenath Enclave, near Harsiddhi Ceramics, Mumbai Naka, Renuka
+                            Nagar,
+                            Nashik, Maharashtra 422 011.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid text-body copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; 2025 <a class="fw-semi-bold" href="#">Absys</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                    <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                    <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                    Designed By <a class="fw-semi-bold" href="https://htmlcodex.com"></a> <a
+                        href="https://themewagon.com" target="_blank">Absys</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top border-0"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!-- Free Consultation Modal -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quoteModalLabel">Free Consultation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailAddress" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="emailAddress" placeholder="you@example.com"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="123-456-7890" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectDetails" class="form-label">Project Details</label>
+                            <textarea class="form-control" id="projectDetails" rows="3"
+                                placeholder="Describe your project..."></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Owl Carousel initialization -->
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 30,
+                autoplay: true,
+                autoplayTimeout: 2500,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+        });
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                autoplayHoverPause: true,
+                smartSpeed: 800,
+                dots: true,
+                nav: false
+            });
+        });
+
+    </script>
+</body>
+
+</html>

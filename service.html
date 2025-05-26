@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Services</title>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+     <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+       .btn-sm-square:hover {
+            background-color: rgb(16, 190, 217) !important;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link:active,
+        .navbar-nav .nav-link:focus,
+        .navbar-
+        
+        nav .nav-link.show,
+        .navbar-nav .dropdown-item:active {
+            color: white !important;
+            background-color: inherit;
+            /* Keep background unchanged if needed */
+        }
+
+        .dropdown-item:hover {
+            color: rgb(0, 0, 255) !important;
+        }
+
+        .about-img img.animated {
+            box-shadow: 0 0 25px rgba(0, 123, 255, 0.6);
+            /* Blue glow */
+            transition: box-shadow 0.6s ease-in-out;
+        }
+
+        .fa {
+            color: #06a3ec !important;
+            /* Bootstrap primary blue */
+        }
+
+       /* services section */
+        .feature-item {
+            background-image: url('img/bg-pattern.jpg');
+            /* Replace with your desired background image */
+            background-size: cover;
+            background-position: center;
+            transition: background-size 0.5s ease, transform 0.5s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-item::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            /* Optional white overlay */
+            z-index: -1;
+            transition: opacity 0.5s ease;
+        }
+
+        .feature-item:hover {
+            background-size: 110%;
+            transform: scale(1.02);
+        }
+
+        .feature-item:hover::before {
+            opacity: 0.1;
+        }
+
+        /* Text color changes to white on hover */
+        .feature-item:hover h5,
+        .feature-item:hover p {
+            color: white !important;
+        }
+
+        /* Change square background to dark blue on hover */
+        .feature-item:hover .feature-icon {
+            background-color: #003366 !important;
+            /* Dark blue */
+            transition: background-color 0.5s ease;
+        }         
+   
+   
+
+    
+    /* service images */
+    .service-item img {
+    width: 100%;
+    height: 200px; /* or any desired fixed height */
+    object-fit: cover;
+    border-radius: 5px; /* optional: for rounded corners */
+}
+
+/* technologies */
+
+    .tech-section {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      padding: 80px 0;
+      color: #fff;
+    }
+
+    .tech-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #00d4ff;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    .tech-card {
+      background: #fff;
+      color: #333;
+      border-radius: 12px;
+      padding: 20px;
+      width: 160px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .tech-card img {
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .tech-card p {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    /* Swiper controls */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #00d4ff;
+    }
+
+    </style>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/Logo/favicon-removebg-preview.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+     <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-grey text-dark d-none d-lg-flex wow fadeIn" data-wow-delay="0.1s"
+        style="border-bottom: 1px solid #ddd;">
+        <div class="container py-2">
+            <div class="d-flex align-items-center">
+                <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                    <img src="img/Logo/logo-removebg-preview.png" alt="Logo" style="width: 120px; height: auto;">
+                </a>
+                <div class="ms-auto d-flex align-items-center">
+                    <small class="d-flex align-items-center" style="font-size: 0.9rem;">
+                        <i class="fa fa-envelope me-2" aria-hidden="true"></i>
+                        <a href="mailto:info@engeniuspark.com"
+                            style="color: black; text-decoration: none;">contact@absys.co.in</a>
+                    </small>
+
+                    <div class="ms-4 d-flex align-items-center">
+                        <a target="_blank" class="btn btn-sm-square btn-light btn-facebook ms-2"
+                            href="https://www.facebook.com/engeniuspark" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a target="_blank" class="btn btn-sm-square btn-light btn-twitter ms-2"
+                            href="https://x.com/EngeniusPark" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a target="_blank" class="btn btn-sm-square btn-light btn-linkedin ms-2"
+                            href="https://www.linkedin.com/company/engeniuspark/posts/?feedView=all"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a target="_blank" class="btn btn-sm-square btn-light btn-whatsapp ms-2"
+                            href="https://wa.me/+917588619361" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a target="_blank" class="btn btn-sm-square btn-light btn-instagram ms-2"
+                            href="https://www.instagram.com/_estpl_/" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+                <a href="index.html" class="navbar-brand d-lg-none">
+                    <h1 class="fw-bold m-0"></h1>
+                    <img src="img/navbar_LOGO-removebg-preview.png" alt="">
+                </a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <!-- About us  -->
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="about.html" class="dropdown-item">About Company</a>
+                                <a href="mission.html" class="dropdown-item">Mission & Vision</a>
+                                <a href="aboutfounder.html" class="dropdown-item">About Founders</a>
+                                <a href="LifeAtAbsys.html" class="dropdown-item">Life At Absys</a>
+
+                            </div>
+                        </div>
+                        
+                        <!-- Services Mega Menu -->
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu w-100 mt-0 border-0 shadow-lg mega-dropdown p-4"
+                                aria-labelledby="servicesDropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <!-- Mobile Application -->
+                                        <div class="col-md-3">
+                                            <h6 class="text-uppercase fw-bold" style="color: rgb(42, 196, 235);">MOBILE APPLICATION</h6>
+                                            <hr class="dropdown-divider bg-primary" style="width: 40px;">
+                                            <a class="dropdown-item" href="androidapp.html">Android App</a>
+                                            <a class="dropdown-item" href="iosApp.html">Ios App</a>
+                                            <a class="dropdown-item" href="Hybrid.html">Hybrid App</a>
+                                        </div>
+
+                                        <!-- Web Application -->
+                                        <div class="col-md-3">
+                                            <h6 class="text-uppercase fw-bold" style="color: rgb(42, 196, 235);">WEB APPLICATION</h6>
+                                            <hr class="dropdown-divider bg-primary" style="width: 40px;">
+                                            <a class="dropdown-item" href="webapp.html">Website Development</a>
+                                        </div>
+
+                                        <!-- Technologies -->
+                                        <div class="col-md-3">
+                                            <h6 class="text-uppercase fw-bold" style="color: rgb(42, 196, 235);">TECHNOLOGIES</h6>
+                                            <hr class="dropdown-divider bg-primary" style="width: 40px;">
+                                            <a class="dropdown-item" href="SAPtech.html">SAP</a>
+                                        </div>
+
+                                        <!-- Digital Marketing -->
+                                        <div class="col-md-3">
+                                            <h6 class="text-uppercase fw-bold" style="color: rgb(42, 196, 235);">DIGITAL MARKETING</h6>
+                                            <hr class="dropdown-divider bg-primary" style="width: 40px;">
+                                            <a class="dropdown-item" href="SEO.html">Search Engine Optimization</a>
+                                            <a class="dropdown-item" href="googleAdwords.html">Google Adwords PPC</a>
+                                            <a class="dropdown-item" href="socialmedia.html">Social Media Marketing</a>
+                                            <a class="dropdown-item" href="searchenginemarketing.html">Search Engine Marketing</a>
+                                            <a class="dropdown-item" href="acceleratedlanding.html">Accelerated Landing Pages</a>
+                                            <a class="dropdown-item" href="leadgeneration.html">Business Lead Generation</a>
+                                            <a class="dropdown-item" href="affiliateMarketing.html">Affiliate Marketing</a>
+                                            <a class="dropdown-item" href="emailMarketing.html">Email Marketing</a>
+                                            <a class="dropdown-item" href="contentmarketing.html">Content Marketing</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <!-- Ai -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Platform</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="D2C.html" class="dropdown-item">D2C</a>
+                            </div>
+                        </div>
+                        <!-- Aviation -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Aviation</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="smartAirportsolution.html" class="dropdown-item">Smart Airport Solutions</a>
+                            </div>
+                        </div>
+                        <!-- Contact Details -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact Details</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="contactUS.html" class="dropdown-item">Contact Us</a>
+                                <a href="media.html" class="dropdown-item">Media</a>
+                                <a href="events.html" class="dropdown-item">Events</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--career  -->
+                    <div class="ms-auto d-none d-lg-block">
+                        <a href="career.html" class="btn btn-primary py-2 px-3 border-0">CAREER</a>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+<!-- Page Header Start -->
+    <div class="container-fluid page-header pt-5 wow fadeIn d-flex align-items-center justify-content-center"
+        data-wow-delay="0.1s"
+        style="background: url('img/banner/SERVICES.jpg') center center / cover no-repeat; height: 75vh;">
+        <div class="container text-center">
+            <!-- <h1 class="display-4 text-white mb-4">ABOUT US</h1> -->
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+<!-- services start -->
+ 
+    <div class="container-fluid pt-6 pb-6" style="background-color: lightblue;">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img" style="width: 100%; display: flex; justify-content: center;">
+                        <!-- add video here -->
+                        <img src="img/services/service_about.jpg" alt="iOS App" class="img-fluid"
+                            style="width: 550px; height: 440px;">
+    
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 style="color: #0d6efd;" class="display-6 mb-4 text-uppercase">Our Web Development Services Include</h1>
+                    <p style="color: black;">Our primary focus is to create websites that promote excellent brand visibility and better lead generation. This simple equation ensures higher revenues for SME’s, Professionals, Startups, and Corporate and many other profiles too.</p>
+                    <p style="color: black;">We craft responsive, high-performance websites tailored to your business objectives using modern technologies like React, Angular, and Vue.</p>
+  <p style="color: black;">Our team focuses on clean UI/UX, fast load times, and SEO optimization to ensure your site stands out and ranks well.</p>
+  <p style="color: black;">From sleek landing pages to complex web applications, we ensure seamless performance across all devices and browsers.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <!-- services end -->
+
+    <!-- Services animation Start -->
+    <div class="container-fluid pt-6 pb-6">
+        <div class="container pt-4">
+            <div class="row g-0 feature-row wow fadeIn" data-wow-delay="0.1s">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="feature-item border-0 h-100" style="background-image: url('img/services/turquoise.jpg');">
+                        <div class="feature-icon btn-xxl-square mb-4 mt-n4" style="background-color: #06a3ec;">
+                           <i class="fa fa-cogs fa-2x text-white"></i>
+
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h5 class="text-uppercase mb-3">Custom Web Development</h5>
+                            <p>A custom web design is the process of learning and understanding about your business, and applying a sound process of strategy, user experience, design execution, programming, and marketing to form a successful online business.
+
+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="feature-item border-0 h-100"
+                        style="background-image: url('img/services/turquoise.jpg');">
+                        <div class="feature-icon btn-xxl-square mb-4 mt-n4" style="background-color: #06a3ec;">
+                            <i class="fa fa-window-restore fa-2x text-white"></i>
+
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h5 class="text-uppercase">Web Portal Development</h5>
+                            <p>Web portal development facilitates the creation of this useful, secure, and personalized access point that organizes information according to specific users' needs. You may hear it referred to as web portal application development or portal application development.
+
+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="feature-item border-0 h-100"
+                        style="background-image: url('img/services/turquoise.jpg');">
+                        <div class="feature-icon btn-xxl-square mb-4 mt-n4" style="background-color: #06a3ec;">
+                           <i class="fa fa-shopping-cart fa-2x text-white"></i>
+
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h5 class="text-uppercase">Ecommerce Web Development</h5>
+                            <p>Ecommerce website development is the process of developing the technical aspects of your ecommerce website — how it functions, accepts payments, behaves in response to user action and appears aesthetically.
+
+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="feature-item border-0 h-100"
+                        style="background-image: url('img/services/turquoise.jpg');">
+                        <div class="feature-icon btn-xxl-square mb-4 mt-n4" style="background-color: #06a3ec;">
+                           <i class="fa fa-tools fa-2x text-white"></i>
+
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h5 class="text-uppercase">Maintenance & Support</h5>
+                            <p>Website maintenance is the simple act of regularly checking your website for problems and then making sure that everything is up to date and relevant.
+
+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services animation End -->
+
+<!-- service portfolio Start -->
+<div class="container-fluid service pt-6 pb-6" style="background-color: rgb(200, 225, 233);">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 style="color: #0d6efd;" class="display-6 text-uppercase mb-5">Service Portfolio</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="img/services/frontend.png" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h5 class="text-uppercase">Frontend development</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.
+                                </p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="img/services/Backend-Development-Services.webp" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h5 class="text-uppercase">Backend Development</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.
+                                </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="img/services/saas.jpeg" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h5 class="text-uppercase">Saas Development </h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.
+                                </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="img/services/qa.jpeg" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h5 class="text-uppercase">QA and Testing</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.                                </p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            
+           
+            
+
+        </div>
+    </div>
+</div>
+<!-- service portfolio End -->
+
+
+<!-- Technologies Section -->
+<section class="tech-section">
+  <div class="container">
+    <h2>Technologies We Use</h2>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Example Slides -->
+        <div class="swiper-slide">
+          <div class="tech-card">
+            <img src="img/services/icon-01.png" alt="PHP" />
+            <p></p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="tech-card">
+            <img src="img/services/icon-02.png" alt="CakePHP" />
+            <p></p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="tech-card">
+            <img src="img/services/icon-03.png" alt="Laravel" />
+            <p></p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="tech-card">
+            <img src="img/services/icon-04.png" alt="React" />
+            <p></p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="tech-card">
+            <img src="img/services/icon-05.png" alt="Node.js" />
+            <p></p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="tech-card">
+            <img src="img/services/icon-06.png" alt="Angular" />
+            <p></p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="tech-card">
+            <img src="img/services/icon-07.png" alt="MySQL" />
+            <p></p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="tech-card">
+            <img src="img/services/icon-08.png" alt="MongoDB" />
+            <p></p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="tech-card">
+            <img src="img/services/icon-09.png" alt="HTML5" />
+            <p></p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="tech-card">
+            <img src="img/services/icon-12.png" alt="Bootstrap" />
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div> -->
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <img src="img/Logo/footer-removebg-preview.png" alt="" width="120" class="mb-4">
+                    <p class="mb-2" style="justify-content: center;">We Have A Dream, A Dream to Achieve Excellence.
+                        Industries grow with developments and advancements. Our experienced and expert team excels in
+                        every domain and delivers you deep insights on your project before the actual work starts.</p>
+                    <div class="ms-3 d-flex align-items-left">
+                        <a target="_blank" class="social-icon ms-2" href="https://www.facebook.com/engeniuspark"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a target="_blank" class="social-icon ms-2" href="https://x.com/EngeniusPark"><i
+                                class="fab fa-twitter"></i></a>
+                        <a target="_blank" class="social-icon ms-2"
+                            href="https://www.linkedin.com/company/engeniuspark/posts/?feedView=all"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" class="social-icon ms-2" href="https://www.instagram.com/engeniuspark"><i
+                                class="fab fa-instagram"></i></a>
+                        <a target="_blank" class="social-icon ms-2" href="https://wa.me/+917588619361"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="about.html">About us</a>
+                    <a class="btn btn-link" href="service.html">Services</a>
+                    <a class="btn btn-link" href="D2C.html">Platform</a>
+                    <a class="btn btn-link" href="smartAirportsolution.html">Aviation</a>
+                    <a class="btn btn-link" href="career.html">Career</a>
+                    <a class="btn btn-link" href="privacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="terms&condition.html">Terms & Conditions</a>
+                    <a class="btn btn-link" href="SAPtech.html">SAP</a>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <h5 class="text-uppercase text-light mb-4">Pune | Nashik</h5>
+
+                    <!-- India Office -->
+                    <div class="mb-4">
+                        <p class="mb-2 text-white fw-bold"><i class="fa fa-map-marker-alt text-primary me-3"></i>Head
+                            Office | Pune</p>
+                        <p class="text-uppercase mb-0 text-white">
+                            207, A- wing, Jai Ganesh Vision, Akurdi Chowk, Akurdi, Pune 411 035.
+                        </p>
+                    </div>
+
+                    <!-- USA Office -->
+                    <div class="mb-4">
+                        <p class="mb-2 text-white fw-bold"><i class="fa fa-map-marker-alt text-primary me-3"></i> Office
+                            | Nashik</p>
+                        <p class="text-uppercase mb-0 text-white">
+                            Office No 304 , Shreenath Enclave, near Harsiddhi Ceramics, Mumbai Naka, Renuka Nagar,
+                            Nashik, Maharashtra 422 011.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid text-body copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; 2025 <a class="fw-semi-bold" href="#">Absys</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                    <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                    <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                    Designed By <a class="fw-semi-bold" href="https://htmlcodex.com"></a> <a
+                        href="https://themewagon.com" target="_blank">Absys</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top border-0"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top End -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Owl Carousel initialization -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 30,
+                autoplay: true,
+                autoplayTimeout: 2500,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                autoplayHoverPause: true,
+                smartSpeed: 800,
+                dots: true,
+                nav: false
+            });
+        });
+
+
+        const counters = document.querySelectorAll(".counter");
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-count");
+      const count = +counter.innerText;
+      const increment = Math.ceil(target / 100);
+
+      if (count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+    updateCount();
+  });
+
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      320: { slidesPerView: 2 },
+      576: { slidesPerView: 3 },
+      768: { slidesPerView: 4 },
+      992: { slidesPerView: 5 }
+    }
+  });
+
+  
+    </script>
+    </body>
+</html>
