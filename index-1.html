@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Start Meta -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Bantec - IT Service & Technology HTML5 Template">
+	<meta name="keywords" content="Creative, Digital, multipage, landing, freelancer template">
+	<meta name="author" content="ThemeOri">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Title of Site -->
+	<title>Absys Technologies LLP</title>
+
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="assets/img/Logo/favicon-removebg-preview.png">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="assets/css/all.css">
+	<!-- Flat Icon CSS -->
+	<link rel="stylesheet" href="assets/webfonts/flat-icon/flaticon_bantec.css">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- Swiper Bundle CSS -->
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+	<!-- Slick CSS -->
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- Mean Menu CSS -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="assets/sass/style.css">
+	<link rel="stylesheet" href="path-to-your/flaticon.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+	<style>
+		.btn-sm-square:hover {
+			background-color: rgb(16, 190, 217) !important;
+			color: white !important;
+		}
+
+		.navbar-nav .nav-link:active,
+		.navbar-nav .nav-link:focus,
+		.navbar-nav .nav-link.show,
+		.navbar-nav .dropdown-item:active {
+			color: white !important;
+			background-color: inherit;
+			/* Keep background unchanged if needed */
+		}
+
+		.dropdown-item:hover {
+			color: blue !important;
+		}
+
+		.career-card {
+			background: #f9f9f9;
+			border-left: 5px solid #0d6efd;
+			padding: 20px;
+			border-radius: 6px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.career-card:hover {
+			background: #eef5ff;
+		}
+
+		.career-card h5 {
+			margin-bottom: 10px;
+		}
+
+		.career-card p {
+			margin-bottom: 8px;
+		}
+
+		.btn-apply {
+			font-size: 0.9rem;
+		}
+
+		/* Enhanced search bar */
+		.search-wrapper {
+			position: relative;
+		}
+
+		.search-wrapper i {
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			transform: translateY(-50%);
+			color: #6c757d;
+		}
+
+		#jobSearch {
+			padding-left: 2.5rem;
+			border-radius: 30px;
+			border: 1px solid #ced4da;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+			transition: all 0.3s ease-in-out;
+		}
+
+		#jobSearch:focus {
+			outline: none;
+			border-color: #0d6efd;
+			box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+			background-color: #fefefe;
+		}
+
+		/* Location Popup */
+		.location-wrapper {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+		}
+
+		.location-popup {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			margin-top: 8px;
+			background-color: #f8f9fa;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			padding: 10px 15px;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+			white-space: nowrap;
+			z-index: 1000;
+		}
+
+		.location-wrapper:hover .location-popup {
+			display: block;
+		}
+
+		/* Job-pill */
+		.career-card .badge {
+			padding: 0.4em 0.8em;
+			font-size: 0.85rem;
+			border-radius: 12px;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+			user-select: none;
+		}
+
+		.career-card .badge:hover {
+			background-color: #0d6efd;
+			color: white;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		.fa {
+			color: #06a3ec !important;
+			/* Bootstrap primary blue */
+		}
+
+		.nav-link.active {
+			display: none;
+		}
+
+		/* Text color changes to white on hover */
+		.feature-item:hover h5,
+		.feature-item:hover p {
+			color: gray;
+
+		}
+
+		/* Change square background to dark blue on hover */
+		.feature-item:hover .feature-icon {
+			background-color: #003366 !important;
+			/* Dark blue */
+			transition: background-color 0.5s ease;
+		}
+
+		.rounded-circle {
+			border: 3px solid #0d6efd;
+			padding: 3px;
+			box-sizing: content-box;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			box-shadow: 0 2px 6px rgba(13, 110, 253, 0.15);
+		}
+
+		/* trusted by section */
+		.trusted-section {
+			background: linear-gradient(135deg, #cce6fd 0%, #cce6fd 100%);
+			padding: 60px 0;
+		}
+
+		.trusted-section h2 {
+			font-weight: 700;
+			font-size: 32px;
+			color: #0d6efd;
+			margin-bottom: 40px;
+		}
+
+		.trusted-logo {
+			max-height: 80px;
+			object-fit: contain;
+			padding: 10px;
+			filter: grayscale(100%);
+			transition: transform 0.3s ease, filter 0.3s ease;
+			opacity: 0.8;
+		}
+
+		.trusted-logo:hover {
+			filter: grayscale(0%);
+			transform: scale(1.1);
+			opacity: 1;
+		}
+
+		.owl-carousel .item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.owl-dots .owl-dot span {
+			background: #06a3ec;
+		}
+
+		.owl-dots .owl-dot.active span {
+			background: #003d66;
+		}
+
+		/* process section */
+		.process-section {
+			background: linear-gradient(270deg, #007cf0, #00dfd8, #007cf0, #00dfd8);
+			background-size: 800% 800%;
+			animation: gradientShift 15s ease infinite;
+			color: white;
+			text-align: center;
+			padding: 80px 20px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		@keyframes gradientShift {
+			0% {
+				background-position: 0% 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+
+		.process-box {
+			position: relative;
+			transition: transform 0.3s ease;
+		}
+
+		.process-box:hover {
+			transform: translateY(-10px);
+		}
+
+		.icon-wrap {
+			position: relative;
+			display: inline-block;
+			background: white;
+			padding: 20px;
+			border-radius: 50%;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+		}
+
+		.icon-wrap img {
+			width: 50px;
+			height: 50px;
+			filter: brightness(0) saturate(100%) invert(41%) sepia(98%) saturate(749%) hue-rotate(163deg) brightness(94%) contrast(90%);
+		}
+
+		.step-number,
+		.check-icon {
+			position: absolute;
+			bottom: -10px;
+			right: -10px;
+			background: #ffffff;
+			color: #007cf0;
+			border-radius: 50%;
+			width: 28px;
+			height: 28px;
+			line-height: 28px;
+			font-weight: bold;
+			font-size: 14px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.check-icon {
+			color: #28a745;
+			font-size: 18px;
+		}
+
+		.process-box h5 {
+			margin-top: 20px;
+			font-weight: 600;
+			color: white;
+		}
+
+		.arrow {
+			display: none;
+		}
+
+		@media (min-width: 768px) {
+			.process-box::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: -60px;
+				width: 60px;
+				height: 1px;
+				border-top: 2px dotted white;
+				transform: translateY(-50%);
+			}
+
+			/* Remove arrow from the last item */
+			.col-md-3:last-child .process-box::after {
+				display: none;
+			}
+		}
+
+		.process-section p {
+			font-size: 1.1rem;
+			max-width: 700px;
+			margin: 40px auto 20px;
+		}
+
+		.process-section .btn {
+			border-radius: 30px;
+			padding: 10px 25px;
+			font-weight: 600;
+			background: #fff;
+			color: #007cf0;
+			transition: background 0.3s;
+		}
+
+		.process-section .btn:hover {
+			background: #f0f0f0;
+		}
+
+		/* trusted by */
+		.logo-img {
+			max-height: 90px;
+			width: auto;
+			object-fit: contain;
+			padding: 18px;
+			background: #ffffff;
+			border-radius: 18px;
+			border: 1px solid #e6e6e6;
+			transition: all 0.4s cubic-bezier(0.45, 0, 0.2, 1);
+			box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+			filter: grayscale(70%) brightness(0.95);
+			opacity: 0.85;
+			cursor: pointer;
+			backdrop-filter: blur(2px);
+		}
+
+		.logo-img:hover {
+			transform: scale(1.1) translateY(-6px);
+			box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15), 0 0 10px rgba(6, 163, 236, 0.1);
+			filter: grayscale(0%) brightness(1.08);
+			opacity: 1;
+			border-color: #06a3ec;
+			background: linear-gradient(135deg, #ffffff, #f8fafd);
+		}
+
+		.hover-scale:hover {
+			transform: scale(1.03);
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.trusted-carousel .item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 15px;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.trusted-carousel .item:hover {
+			transform: scale(1.05);
+		}
+
+		.trusted-carousel .logo-img {
+			max-height: 80px;
+			width: auto;
+			object-fit: contain;
+			filter: grayscale(100%);
+			transition: filter 0.3s ease, transform 0.3s ease;
+		}
+
+		.trusted-carousel .logo-img:hover {
+			filter: grayscale(0%);
+			transform: scale(1.1);
+		}
+
+		@media (max-width: 576px) {
+			.trusted-carousel .logo-img {
+				max-height: 60px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Preloader Start -->
+	<div class="loader">
+		<span class="loader-container"></span>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- Top Bar Start -->
+	<div class="top__bar two">
+		<div class="custom__container">
+			<div class="row">
+				<!-- Left Side -->
+				<div class="col-12 col-md-6 col-lg-7">
+					<div
+						class="top__bar-left d-flex flex-wrap gap-3 text-white align-items-center justify-content-center justify-content-md-start">
+						<a href="https://wa.me/917588619361" target="_blank"
+							class="text-white d-flex align-items-center">
+							<i class="fas fa-phone-alt me-2"></i><span>(+91) 75886 19361</span>
+						</a>
+						<a href="mailto:contact@absys.co.in" class="text-white d-flex align-items-center">
+							<i class="fas fa-envelope me-2"></i><span>contact@absys.co.in</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Right Side -->
+				<div class="col-12 col-md-6 col-lg-5 text-center text-md-end">
+					<div class="top__bar-right d-flex justify-content-center justify-content-md-end gap-3">
+						<a href="https://www.linkedin.com/company/engeniuspark/posts/?feedView=all" target="_blank"
+							aria-label="LinkedIn"><i class="fab fa-linkedin-in fs-5"></i></a>
+						<a href="https://www.instagram.com/_estpl_/?hl=en" target="_blank" aria-label="Instagram"><i
+								class="fab fa-instagram fs-5"></i></a>
+						<a href="https://x.com/EngeniusPark" target="_blank" aria-label="Twitter"><i
+								class="fab fa-twitter fs-5"></i></a>
+						<a href="https://www.facebook.com/engeniuspark" target="_blank" aria-label="Facebook"><i
+								class="fab fa-facebook-f fs-5"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Top Bar Style -->
+	<style>
+		.top__bar a {
+			text-decoration: none;
+			color: #ffffff;
+			transition: color 0.3s ease;
+		}
+
+		.top__bar a i {
+			color: #00bcd4;
+			transition: color 0.3s ease;
+		}
+
+		.top__bar a:hover i {
+			color: #223fe2;
+		}
+
+		.top__bar a:hover {
+			color: #00bcd4;
+		}
+	</style>
+	<!-- Top Bar End -->
+
+
+
+	<!-- navbar Start -->
+	<div class="header__area header__sticky five">
+		<div class="container">
+			<div class="header__area-menubar">
+				<!-- Left Logo Section -->
+				<div class="header__area-menubar-left">
+					<div class="header__area-menubar-left-logo">
+						<a href="index-1.html">
+							<img class="dark-n" src="assets/img/Logo/logo-removebg-preview.png" alt="image">
+						</a>
+					</div>
+				</div>
+
+				<!-- Center Menu Section -->
+				<div class="header__area-menubar-center">
+					<div class="header__area-menubar-center-menu menu-responsive">
+						<ul id="mobilemenu">
+							<li class="menu-item-has-children"><a href="#">What we do <i
+										class="fas fa-angle-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="Overview.html">Overview</a></li>
+
+									<li class="menu-item-has-children"><a href="#">SAP Technologies <i
+												class="fas fa-angle-right"></i></a>
+										<ul class="sub-menu">
+											<li><a href="SD.html">SD Consultant</a></li>
+											<li><a href="PI.html">PI/PO Consultant</a></li>
+											<li><a href="pp.html">PP/QM Consultant</a></li>
+											<li><a href="tm.html">TM Consultant</a></li>
+											<li><a href="ewm.html">EWM Consultant</a></li>
+											<li><a href="apo.html">APO Consultant</a></li>
+											<li><a href="ehs.html">EHS Consultant</a></li>
+											<li><a href="ariba.html">Ariba Consultant</a></li>
+											<li><a href="vim.html">VIM Consultant</a></li>
+											<li><a href="concur.html">Concur Consultant</a></li>
+										</ul>
+									</li>
+
+
+									<li class="menu-item-has-children"><a href="#">IT Services <i
+												class="fas fa-angle-right"></i></a>
+										<ul class="sub-menu">
+											<li class="menu-item-has-children"><a href="#">Mobile Application <i
+														class="fas fa-angle-right"></i></a>
+												<ul class="sub-menu">
+													<li><a href="android.html">Android App</a></li>
+													<li><a href="ios.html">iOS App</a></li>
+												</ul>
+											</li>
+
+											<li class="menu-item-has-children"><a href="#">Website Development <i
+														class="fas fa-angle-right"></i></a>
+												<ul class="sub-menu">
+													<li><a href="ui.html">UI/UX Design</a></li>
+													<li><a href="webhosting.html">Web Hosting</a></li>
+												</ul>
+											</li>
+
+											<li><a href="webapp.html">Web Application </a></li>
+											<li><a href="ai.html">Artificial intelligence</a></li>
+
+										</ul>
+									</li>
+
+									<li class="menu-item-has-children"><a href="#">IT Consulting <i
+												class="fas fa-angle-right"></i></a>
+										<ul class="sub-menu">
+											<li class="menu-item-has-children"><a href="#">INFOR M3 <i
+														class="fas fa-angle-right"></i></a>
+												<ul class="sub-menu">
+													<li><a href="m3_sales.html">M3 Sales Consultant</a></li>
+													<li><a href="m3-finance.html">M3 Finance Consultant</a></li>
+													<li><a href="m3-procurement.html">M3 Procurement Consultant</a></li>
+													<li><a href="m3-scm.html">M3 SCM Consultant</a></li>
+													<li><a href="m3-technical.html">M3 Technical Consultant</a></li>
+													<li><a href="m3-manufacturing.html">M3 Manufacturing Consultant</a>
+													</li>
+												</ul>
+											</li>
+
+											<li><a href="inforLN.html">INFOR LN </a></li>
+
+										</ul>
+									</li>
+
+									<li><a href="airport.html">Smart Airport Solutions</a></li>
+
+
+								</ul>
+							</li>
+
+
+
+							<li class="menu-item-has-children"><a href="#">Who we are <i
+										class="fas fa-angle-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="about.html">About Company</a></li>
+									<li><a href="vision.html">Vision & Mission</a></li>
+									<li><a href="lifeAtAbsys.html">Life At Absys</a></li>
+								</ul>
+							</li>
+
+							<li class="menu-item-has-children"><a href="#">Insights <i
+										class="fas fa-angle-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="articles.html">Articles</a></li>
+									<li><a href="newsroom.html">Newsroom & Events</a></li>
+									<li><a href="casestudy.html">Case Studies</a></li>
+								</ul>
+							</li>
+
+
+							<li><a href="careers.html">Careers</a></li>
+
+							<li><a href="contactus.html">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Right Buttons Section -->
+				<div class="header__area-menubar-right">
+					<div class="header__area-menubar-right-box d-flex gap-2 flex-wrap">
+						<!-- Get Started Button -->
+						<div class="header__area-menubar-right-box-btn">
+							<a class="btn-one" href="request-quote.html">Get Started
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+
+						<!-- Contact Us Button -->
+						<div class="header__area-menubar-right-box-btn">
+							<a class="btn-one" href="contact.html">Contact Us
+								<i class="fas fa-envelope-open-text"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Get Quote Button (Moved Here) -->
+				<div class="header__area-menubar-right-box-btn">
+					<a class="btn-two" href="service.html">
+						Get Quote <i class="fas fa-file-signature"></i>
+					</a>
+				</div>
+
+				<!-- Mobile Menu Toggle -->
+				<div class="responsive-menu"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="header__area-menubar-right-box-btn">
+		<a class="btn-two animate-bounce-in" href="service.html">
+			Get Quote
+		</a>
+	</div>
+	<!-- navbar End -->
+
+	<!-- banner section start-->
+	<div class="banner__five" style="background-image: url(newbanner/7.png); height: 640px; ">
+		<div class="container">
+			<div class="row align-items-center gy-4 justify-content-center">
+
+				<!-- 🔄 Image Column (moved to left) -->
+				<div class="col-xl-5 col-lg-6 col-md-9">
+					<div class="banner__one-image">
+						<div class="banner__one-image-wrapper">
+							<div class="banner__one-image-wrapper-shapes animate-rotate">
+								<div class="shape shape-1"></div>
+								<div class="shape shape-2"></div>
+							</div>
+							<img src="assets/img/banner/Indexpage_header.jpg" alt="image">
+						</div>
+					</div>
+				</div>
+
+				<!-- 🔄 Text Content Column (moved to right) -->
+				<div class="col-xl-6 offset-xl-1 col-lg-6">
+					<div class="banner__one-content text-white">
+						<span class="subtitle-one">Next Horizon
+
+						</span>
+						<h2 class="animate-slide-left">
+							Empowering Tomorrow with <span>Absys</span>
+						</h2>
+						<p class="animate-fade-up" style="color: black;">
+							At Absys, we fuse creativity with technology to craft cutting-edge IT solutions that spark
+							innovation, accelerate growth, and redefine what's possible.
+						</p>
+
+						<a href="request-quote.html" class="btn-two animate-bounce-in">
+							Request Quote <i class="fas fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Styles -->
+	<style>
+		/* Heading base style */
+		h2.animate-slide-left {
+			font-size: 48px;
+			font-weight: 700;
+			color: #1c2b3a;
+			line-height: 1.3;
+			opacity: 0;
+			animation: slideLeftSkew 1.2s ease-out forwards;
+		}
+
+		h2.animate-slide-left span {
+			color: #0059ff;
+			font-weight: 800;
+		}
+
+		@keyframes slideLeftSkew {
+			0% {
+				opacity: 0;
+				transform: translateX(-60px) skewX(-8deg);
+			}
+
+			100% {
+				opacity: 1;
+				transform: translateX(0) skewX(0);
+			}
+		}
+
+		.banner__one-image-wrapper img {
+			width: 90%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+
+		.btn-two {
+			display: inline-block;
+			padding: 12px 30px;
+			background-color: #0059ff;
+			color: #fff;
+			border-radius: 30px;
+			font-size: 16px;
+			font-weight: 500;
+			text-decoration: none;
+			transition: all 0.3s ease;
+			margin-top: 20px;
+			border: none;
+		}
+
+		.btn-two:hover {
+			background-color: #022a97;
+			color: #f3f7f8;
+			transform: translateY(-4px) scale(1.03);
+			box-shadow: 0 8px 20px rgba(251, 252, 252, 0.4);
+		}
+
+		.btn-two i {
+			margin-left: 8px;
+			transition: transform 0.3s ease, color 0.3s ease;
+			color: inherit;
+		}
+
+		.btn-two:hover i {
+			transform: translateX(5px);
+			color: #ffffff;
+		}
+	</style>
+	<!-- banner section end -->
+
+	<!-- About us Area Start -->
+	<div class="about__three section-padding">
+		<div class="container">
+			<div class="row align-items-center gy-4">
+				<div class="col-xl-6 col-lg-6 col-md-10 col-sm-12">
+					<div class="about__three-content">
+						<span class="subtitle-one">About Absys</span>
+						<h2>Engineering the <span class="highlighted-two">Future</span></h2>
+						<p>We don’t just build software — we build possibilities. At Absys, every project is a journey
+							toward innovation, powered by collaboration and designed for real-world impact.</p>
+
+						<div class="about__three-content-service">
+							<div class="about__three-content-service-single">
+								<i class="fas fa-laptop-code"></i>
+								<div class="content">
+									<h4>IT Services & Consulting</h4>
+									<p>Empowering businesses with strategic IT planning and tailored solutions for
+										growth.</p>
+								</div>
+							</div>
+							<div class="about__three-content-service-single">
+								<i class="fas fa-plane"></i> <!-- Updated icon -->
+								<div class="content">
+									<h4>Smart Airport Solutions</h4>
+									<p>Optimizing airport operations with smart systems for smooth flow, tracking, and
+										security.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-9">
+					<div class="about__three-right">
+						<div class="row align-items-center">
+							<div class="about__three-right-counter">
+								<h4 class="counter">10</h4>
+								<span>Years of Experience</span>
+							</div>
+
+
+							<!-- Left Image Column -->
+							<div class="col-xl-6 col-lg-5 col-md-5 col-sm-6 left-images">
+								<div class="about__three-Left1-image">
+									<img src="assets/img/index_page/about1.png" alt="image" class="top-left-radius">
+								</div>
+								<div class="about__three-Left2-image">
+									<img src="assets/img/index_page/about2.png" alt="image" class="bottom-left-radius">
+								</div>
+							</div>
+
+							<!-- Right Image Column -->
+							<div class="col-xl-6 col-lg-5 col-md-5 col-sm-6">
+								<div class="about__three-right1-image">
+									<img src="assets/img/index_page/about4.png" alt="image">
+								</div>
+								<div class="about__three-right2-image">
+									<img src="assets/img/index_page/about3.png" alt="image">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		/* -------- Text Animations -------- */
+
+		/* Keyframes for a soft fade and slide-up effect */
+		@keyframes fadeSlideUp {
+			from {
+				opacity: 0;
+				transform: translateY(40px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		/* Base animation styles */
+		.about__three-content .subtitle-one,
+		.about__three-content h2,
+		.about__three-content p,
+		.about__three-content-service-single {
+			opacity: 0;
+			animation: fadeSlideUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+			will-change: opacity, transform;
+		}
+
+		/* Staggered animation delays for natural rhythm */
+		.about__three-content .subtitle-one {
+			animation-delay: 0.2s;
+		}
+
+		.about__three-content h2 {
+			animation-delay: 0.4s;
+		}
+
+		.about__three-content p {
+			animation-delay: 0.6s;
+		}
+
+		.about__three-content-service-single:nth-child(1) {
+			animation-delay: 0.8s;
+		}
+
+		.about__three-content-service-single:nth-child(2) {
+			animation-delay: 1s;
+		}
+
+
+		.about__three-Left1-image img,
+		.about__three-Left2-image img,
+		.about__three-right1-image img,
+		.about__three-right2-image img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			border-radius: 20px;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.about__three-Left1-image img {
+			border-top-left-radius: 40px;
+		}
+
+		.about__three-Left2-image img {
+			border-bottom-left-radius: 40px;
+		}
+
+		.about__three-right1-image img {
+			border-top-right-radius: 40px;
+		}
+
+		.about__three-right2-image img {
+			border-bottom-right-radius: 40px;
+		}
+
+		.about__three-Left1-image,
+		.about__three-Left2-image,
+		.about__three-right1-image,
+		.about__three-right2-image {
+			margin-bottom: 20px;
+		}
+
+		.about__three-Left1-image img:hover,
+		.about__three-Left2-image img:hover,
+		.about__three-right1-image img:hover,
+		.about__three-right2-image img:hover {
+			transform: scale(1.03);
+			box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+		}
+	</style>
+	<!-- About us Area End -->
+
+	<!-- Work Process Three Area End -->
+	<div class="work-process__three" style="background-image: url(assets/img/work-process/work-process-bg-2.png);">
+		<div class="container">
+			<div class="row justify-content-center text-center mb-50">
+				<div class="col-xl-6 col-lg-7 col-md-9">
+					<span class="subtitle-one" style="color: white;">Work Process</span>
+					<h2>Work <span class="highlighted-two">Flow</span></h2>
+				</div>
+			</div>
+			<div class="work-process__three-card">
+				<div class="work-process__three-card-arrows">
+					<img src="assets/img/work-process/work-process-arrow-1.png" alt="" class="arrow-1">
+					<img src="assets/img/work-process/work-process-arrow-2.png" alt="" class="arrow-2">
+					<img src="assets/img/work-process/work-process-arrow-1.png" alt="" class="arrow-3">
+				</div>
+				<div class="work-process__three-card-single">
+					<h3>01</h3>
+					<h5>Idea Generation</h5>
+					<p>Creativity at this initial stage, we focus on understanding your unique challenge</p>
+				</div>
+				<div class="work-process__three-card-single middle">
+					<h3>02</h3>
+					<h5>Solution Development</h5>
+					<p>Transitioning from ideas to actionable solutions, our experts employ cutting-edge technologies
+					</p>
+				</div>
+				<div class="work-process__three-card-single">
+					<h3>03</h3>
+					<h5>Outcome Delivery</h5>
+					<p>The culmination of our process, outcome delivery, is where plans become reality.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		/* ---------------------------------- */
+		/* 🌟 KEYFRAMES */
+		/* ---------------------------------- */
+		@keyframes fadeSlideUp {
+			from {
+				opacity: 0;
+				transform: translateY(40px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes zoomIn {
+			from {
+				opacity: 0;
+				transform: scale(0.8);
+			}
+
+			to {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+
+		@keyframes fadeSlideLeft {
+			from {
+				opacity: 0;
+				transform: translateX(-40px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+
+		@keyframes fadeSlideRight {
+			from {
+				opacity: 0;
+				transform: translateX(40px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+
+		@keyframes pulseArrow {
+			0% {
+				transform: translateY(0);
+			}
+
+			50% {
+				transform: translateY(-6px);
+			}
+
+			100% {
+				transform: translateY(0);
+			}
+		}
+
+		/* ---------------------------------- */
+		/* ✨ APPLYING ANIMATIONS */
+		/* ---------------------------------- */
+
+		/* Title & Subtitle */
+		.work-process__three .subtitle-one {
+			opacity: 0;
+			animation: fadeSlideLeft 0.8s ease-out 0.2s forwards;
+		}
+
+		.work-process__three h2 {
+			opacity: 0;
+			animation: fadeSlideRight 0.8s ease-out 0.4s forwards;
+		}
+
+		/* Cards */
+		.work-process__three-card-single {
+			opacity: 0;
+			transform: scale(0.8);
+			animation: zoomIn 0.8s ease forwards;
+		}
+
+		.work-process__three-card-single:nth-child(3) {
+			animation-delay: 0.6s;
+		}
+
+		.work-process__three-card-single.middle {
+			animation-delay: 0.8s;
+		}
+
+		.work-process__three-card-single:nth-child(5) {
+			animation-delay: 1s;
+		}
+
+		/* Hover effect */
+		.work-process__three-card-single:hover {
+			transform: scale(1.05);
+			box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		/* Arrows Animation */
+		.work-process__three-card-arrows img {
+			animation: pulseArrow 2s ease-in-out infinite;
+		}
+
+		.work-process__three-card-arrows .arrow-2 {
+			animation-delay: 0.5s;
+		}
+
+		.work-process__three-card-arrows .arrow-3 {
+			animation-delay: 1s;
+		}
+	</style>
+	<!-- Work Process Three Area End -->
+
+	<!-- Skill Two Area Start -->
+	<!-- <div class="skill__two section-padding">
+  <div class="services__three-title text-center animate-fade-up" style="animation-delay: 0.2s;">
+    <span class="subtitle-one">Tech Portfolio</span>
+    <h2>Smart Innovation. <span class="highlighted-two">Bold Tomorrow.</span></h2>
+  </div>
+
+  <div class="container">
+    <ul class="row nav mb-5 gy-4 justify-content-center">
+      <li class="nav-item col-xl-3 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill__two-tab nav-link active" id="topic-1-tab" data-bs-toggle="pill" data-bs-target="#topic-1" role="button" aria-controls="topic-1">
+          <span class="skill__two-tab-icon"><i class="fas fa-code"></i></span>
+          <span>Web Development</span>
+        </div>
+      </li>
+      <li class="nav-item col-xl-3 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill__two-tab nav-link" id="topic-2-tab" data-bs-toggle="pill" data-bs-target="#topic-2" role="button" aria-controls="topic-2">
+          <span class="skill__two-tab-icon"><i class="fas fa-mobile-alt"></i></span>
+          <span>App Development</span>
+        </div>
+      </li>
+      <li class="nav-item col-xl-3 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill__two-tab nav-link" id="topic-3-tab" data-bs-toggle="pill" data-bs-target="#topic-3" role="button" aria-controls="topic-3">
+          <span class="skill__two-tab-icon"><i class="fas fa-pencil-ruler"></i></span>
+          <span>UI/UX Development</span>
+        </div>
+      </li>
+      <li class="nav-item col-xl-3 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill__two-tab nav-link" id="topic-4-tab" data-bs-toggle="pill" data-bs-target="#topic-4" role="button" aria-controls="topic-4">
+          <span class="skill__two-tab-icon"><i class="fas fa-plane"></i></span>
+          <span>Aviation Solutions</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="skill__two-tab-details tab-content"> -->
+	<!-- Web Development -->
+	<!-- <div class="row align-items-center flex-wrap-reverse gy-4 tab-pane fade show active" id="topic-1" role="tabpanel" aria-labelledby="topic-1-tab">
+        <div class="col-xl-6 col-lg-7 col-md-9">
+          <div class="skill__two-tab-details-content">
+            <h2>Website Development</h2>
+            <p>Design and develop high-performing, responsive websites tailored to showcase your brand and deliver seamless user experiences.</p>
+            <div class="skill__two-tab-details-content-service">
+              <div class="skill__two-tab-details-content-service-left">
+                <div class="service"><i class="far fa-check-circle"></i><span>Responsive & Mobile-Friendly Design</span></div>
+                <div class="service"><i class="far fa-check-circle"></i><span>SEO & Performance Optimization</span></div>
+              </div>
+              <div class="skill__two-tab-details-content-service-right">
+                <div class="service"><i class="far fa-check-circle"></i><span>Custom Features & CMS Integration</span></div>
+                <div class="service"><i class="far fa-check-circle"></i><span>Scalable & Secure Architecture</span></div>
+              </div>
+            </div>
+            <a href="request-quote.html" class="btn-two">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-8">
+          <div class="skill__two-tab-details-image">
+            <div class="skill__two-tab-details-image-wrapper">
+              <img src="assets/img/index_page/webdev_techportfolio.png" alt="Web Development" class="image-1">
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+	<!-- App Development -->
+	<!-- <div class="row align-items-center flex-wrap-reverse gy-4 tab-pane fade" id="topic-2" role="tabpanel" aria-labelledby="topic-2-tab">
+        <div class="col-xl-6 col-lg-7 col-md-9">
+          <div class="skill__two-tab-details-content">
+            <h2>Application Development</h2>
+            <p>Build scalable, high-performance mobile and web applications tailored to meet user needs and business goals with seamless functionality.</p>
+            <div class="skill__two-tab-details-content-service">
+              <div class="skill__two-tab-details-content-service-left">
+                <div class="service"><i class="far fa-check-circle"></i><span>Cross-Platform Compatibility</span></div>
+                <div class="service"><i class="far fa-check-circle"></i><span>Robust Backend Architecture</span></div>
+              </div>
+              <div class="skill__two-tab-details-content-service-right">
+                <div class="service"><i class="far fa-check-circle"></i><span>User-Centric Design</span></div>
+                <div class="service"><i class="far fa-check-circle"></i><span>Real-Time Performance Monitoring</span></div>
+              </div>
+            </div>
+            <a href="request-quote.html" class="btn-two">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-8">
+          <div class="skill__two-tab-details-image">
+            <div class="skill__two-tab-details-image-wrapper">
+              <img src="assets/img/index_page/appdev_techportfolio.png" alt="App Development" class="image-1">
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+	<!-- UI/UX Development -->
+	<!-- <div class="row align-items-center flex-wrap-reverse gy-4 tab-pane fade" id="topic-3" role="tabpanel" aria-labelledby="topic-3-tab">
+        <div class="col-xl-6 col-lg-7 col-md-9">
+          <div class="skill__two-tab-details-content">
+            <h2>UI/UX Development</h2>
+            <p>Craft seamless digital experiences through intuitive design and engaging interfaces that prioritize user satisfaction and brand identity.</p>
+            <div class="skill__two-tab-details-content-service">
+              <div class="skill__two-tab-details-content-service-left">
+                <div class="service"><i class="far fa-check-circle"></i><span>User-Centric Design Approach</span></div>
+                <div class="service"><i class="far fa-check-circle"></i><span>Interactive Prototyping</span></div>
+              </div>
+              <div class="skill__two-tab-details-content-service-right">
+                <div class="service"><i class="far fa-check-circle"></i><span>Mobile-First Responsive Layouts</span></div>
+                <div class="service"><i class="far fa-check-circle"></i><span>Accessibility & Usability Testing</span></div>
+              </div>
+            </div>
+            <a href="request-quote.html" class="btn-two">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-8">
+          <div class="skill__two-tab-details-image">
+            <div class="skill__two-tab-details-image-wrapper">
+              <img src="assets/img/index_page/uiux_techportfolio.png" alt="UI/UX Development" class="image-1">
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+	<!-- Aviation Solutions -->
+	<!-- <div class="row align-items-center flex-wrap-reverse gy-4 tab-pane fade" id="topic-4" role="tabpanel" aria-labelledby="topic-4-tab">
+        <div class="col-xl-6 col-lg-7 col-md-9">
+          <div class="skill__two-tab-details-content">
+            <h2>Smart Airport Solutions</h2>
+            <p>Digitize airport operations with intelligent systems that optimize passenger flow, security, and operational efficiency for a seamless travel experience.</p>
+            <div class="skill__two-tab-details-content-service">
+              <div class="skill__two-tab-details-content-service-left">
+                <div class="service"><i class="far fa-check-circle"></i><span>Automated Check-In & Boarding</span></div>
+                <div class="service"><i class="far fa-check-circle"></i><span>Real-Time Flight & Gate Updates</span></div>
+              </div>
+              <div class="skill__two-tab-details-content-service-right">
+                <div class="service"><i class="far fa-check-circle"></i><span>AI-Driven Security Surveillance</span></div>
+                <div class="service"><i class="far fa-check-circle"></i><span>Smart Baggage Handling Systems</span></div>
+              </div>
+            </div>
+            <a href="request-quote.html" class="btn-two">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-8">
+          <div class="skill__two-tab-details-image">
+            <div class="skill__two-tab-details-image-wrapper">
+              <img src="assets/img/index_page/airport_techportfolio.png" alt="Smart Airport Solutions" class="image-1">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+	<!-- </div> -->
+	<!-- Skill Two Area End -->
+
+	<!-- Service Three Area Start -->
+	<div class="services__three section-padding">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-xl-6">
+					<div class="services__three-title text-center animate-fade-up" style="animation-delay: 0.2s;">
+						<span class="subtitle-one">Engineering What’s Next</span>
+						<h2>Smart IT Solutions for a Bold <span class="highlighted-two">Tomorrow</span></h2>
+					</div>
+				</div>
+			</div>
+			<div class="row gy-4 justify-content-center flex-wrap services__three-items">
+				<div class="col-xl-4 col-lg-4 col-md-6 animate-fade-up" style="animation-delay: 0.4s;">
+					<div class="services__three-single-service">
+						<div class="services__three-single-service-icon">
+							<i class="fas fa-laptop-code"></i>
+						</div>
+						<div class="services__three-single-service-content">
+							<h4>Application Development</h4>
+							<p>We design and develop scalable, high-performance applications tailored to your business
+								goals and user needs.</p>
+							<a href="Appdevelopment.html" class="btn-three">read more <i
+									class="fas fa-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-4 col-lg-4 col-md-6 animate-fade-up" style="animation-delay: 0.6s;">
+					<div class="services__three-single-service">
+						<div class="services__three-single-service-icon">
+							<i class="fas fa-bullhorn"></i>
+						</div>
+						<div class="services__three-single-service-content">
+							<h4>Website Development</h4>
+							<p>Design and develop responsive, high-performance websites that reflect your brand, enhance
+								user experience, and drive business growth.</p>
+
+							<a href="webdev.html" class="btn-three">read more <i class="fas fa-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-4 col-lg-4 col-md-6 animate-fade-up" style="animation-delay: 0.8s;">
+					<div class="services__three-single-service">
+						<div class="services__three-single-service-icon">
+							<i class="fas fa-plane-departure"></i>
+						</div>
+						<div class="services__three-single-service-content">
+							<h4>Aviation Solutions</h4>
+							<p>Enhancing airport operations with smart, secure, and scalable aviation solutions tailored
+								for efficiency and future growth.</p>
+							<a href="airport.html" class="btn-three">read more <i class="fas fa-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Service Three Area End -->
+
+
+	<style>
+		.services__three.section-padding {
+			padding-top: 40px;
+			/* reduce top padding */
+		}
+
+		/* Fade-Up Animation */
+		@keyframes fadeUp {
+			from {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.animate-fade-up {
+			opacity: 0;
+			animation: fadeUp 1s ease-out forwards;
+		}
+	</style>
+	<!-- Service Three Area End -->
+
+	<!-- Why Choose Us Area Start -->
+	<div class="why-choose-us__one section-padding">
+		<div class="container">
+			<div class="row gy-4 align-items-center">
+				<div class="col-xl-6 col-lg-7 col-md-9">
+					<div class="why-choose-us__one-left">
+						<div class="why-choose-us__one-title">
+							<span class="subtitle-one">Why Absys?</span>
+							<h2>Where Innovation Meets <span class="highlighted-two">Execution</span></h2>
+							<p>We craft smart solutions that grow with your vision and drive digital success.</p>
+						</div>
+						<div class="why-choose-us__one-quality">
+							<div class="why-choose-us__one-quality-single">
+								<div class="icon">
+									<i class="fas fa-lightbulb"></i>
+
+								</div>
+								<div class="why-choose-us__one-quality-single-content">
+									<h4>Visionary Tech Expertise</h4>
+									<p>From idea to impact, we fuse creativity with tech to deliver game-changing
+										solutions.</p>
+								</div>
+							</div>
+							<div class="why-choose-us__one-quality-single">
+								<div class="icon">
+									<i class="fas fa-globe"></i>
+								</div>
+								<div class="why-choose-us__one-quality-single-content">
+									<h4>Global-Ready Reliability</h4>
+									<p>24/7 support and a client-first approach—Absys delivers reliability, globally.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-5 offset-xl-1 col-lg-6 col-md-10">
+					<div class="why-choose-us__one-image">
+						<div class="why-choose-us__one-image-shape">
+							<div class="shape shape-1 animate-x-axis"></div>
+							<div class="shape shape-2 animate-x-axis"></div>
+							<img src="assets/img/shape/why-choose-shape.png" alt=""
+								class="shape shape-3 animate-y-axis">
+						</div>
+						<img src="assets/img/index_page/whychooseus.png" alt="image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Why Choose Us Area End -->
+
+
+
+
+	<!-- features area -->
+	<div class="services__one section-padding">
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col-xl-7 col-lg-7 col-md-9 services__one-title">
+					<span class="subtitle-one">Core Features</span>
+					<h2>Empowering Innovation in <span class="highlighted-two">IT & Aviation</span></h2>
+					<h2> </h2>
+				</div>
+			</div>
+			<div class="row align-items-center justify-content-center">
+				<!-- Left Column Services -->
+				<div class="col-xl-3">
+					<div class="row">
+						<div class="col-xl-12 col-md-6">
+							<div class="single-service">
+								<div class="services__one-single-service-icon">
+									<i class="flaticon-global-network"></i>
+								</div>
+								<div class="services__one-single-service-content">
+									<h4>Cloud Infrastructure Services</h4>
+									<p>Scalable and secure cloud deployment.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-12 col-md-6 xl-mb-30">
+							<div class="single-service">
+								<div class="services__one-single-service-icon">
+									<i class="flaticon-mobile-phone-1"></i>
+								</div>
+								<div class="services__one-single-service-content">
+									<h4>Business Intelligence & Analytics</h4>
+									<p>Data insights for smarter decisions.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Center Image -->
+				<div class="col-xl-6 col-lg-7">
+					<div class="services-image-wrapper">
+						<img src="assets/img/index_page/corefeatures.png" alt="Absys Services">
+					</div>
+				</div>
+
+				<!-- Right Column Services -->
+				<div class="col-xl-3">
+					<div class="row">
+						<div class="col-xl-12 col-md-6">
+							<div class="single-service">
+								<div class="services__one-single-service-icon">
+									<i class="flaticon-idea"></i>
+								</div>
+								<div class="services__one-single-service-content">
+									<h4>Custom Software Development</h4>
+									<p>Reliable and scalable digital products.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-12 col-md-6">
+							<div class="single-service">
+								<div class="services__one-single-service-icon">
+									<i class="flaticon-it"></i>
+								</div>
+								<div class="services__one-single-service-content">
+									<h4>AI Solutions</h4>
+									<p>Intelligent tools for automation.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- features area end -->
+
+
+
+
+
+	<!-- Horizontal Animation Area Start -->
+	<div class="horizontal-scroll">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="horizontal-scroll-active">
+					<div class="horizontal-scroll-single-item">
+						<h3>IT Training</h3>
+						<div class="horizontal-scroll-icon">
+							<i class="flaticon-satellite-signal"></i>
+						</div>
+					</div>
+					<div class="horizontal-scroll-single-item">
+						<h3>Aviation Solutions</h3>
+						<div class="horizontal-scroll-icon">
+							<i class="flaticon-satellite-signal"></i>
+						</div>
+					</div>
+					<div class="horizontal-scroll-single-item">
+						<h3>App Development</h3>
+						<div class="horizontal-scroll-icon">
+							<i class="flaticon-radio-tower"></i>
+						</div>
+					</div>
+					<div class="horizontal-scroll-single-item">
+						<h3>Web Development</h3>
+						<div class="horizontal-scroll-icon">
+							<i class="flaticon-satellite-signal"></i>
+						</div>
+					</div>
+					<div class="horizontal-scroll-single-item">
+						<h3>UI/UX Development</h3>
+						<div class="horizontal-scroll-icon">
+							<i class="flaticon-radio-tower"></i>
+						</div>
+					</div>
+					<div class="horizontal-scroll-single-item">
+						<h3>Software Development</h3>
+						<div class="horizontal-scroll-icon">
+							<i class="flaticon-coding"></i>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Horizontal Animation Area End -->
+
+	<!-- Contact One Area End -->
+	<div class="contact__one"
+		style="padding: 100px 0 70px; background-image: url(assets/img/work-process/work-process-bg.png);">
+		<div class="container">
+			<div class="row align-items-end gy-4 justify-content-between">
+				<div class="col-xl-6">
+					<div class="contact__one-title">
+						<span class="subtitle-one" style="color: white; border: white;">Contact Us</span>
+						<h2>Igniting the <span class="highlighted-two">IT Potential</span></h2>
+						<h2> </h2>
+					</div>
+					<form action="#" class="contact__one-form">
+						<div class="contact__one-form-top">
+							<input type="text" placeholder="First Name...">
+							<input type="text" placeholder="Your Phone...">
+						</div>
+						<input type="email" placeholder="Your E-mail..." class="w-100">
+						<button type="submit" class="btn-two w-100">Sent Now
+							<i class="fas fa-chevron-right"></i>
+						</button>
+					</form>
+				</div>
+				<div class="col-xl-5">
+					<div class="contact__one-right">
+						<div class="row gy-4 align-items-end">
+							<div class="col-xl-8 col-lg-4 col-md-6 col-sm-6">
+								<img src="assets/img/index_page/contact1.png" alt="image">
+							</div>
+							<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+								<div class="contact__one-counter-img">
+									<img src="assets/img/index_page/contact2.png" alt="image">
+								</div>
+								<div class="contact__one-counter">
+									<div class="counter-only">
+										<h3 class="counter">10</h3>
+										<h3>+</h3>
+									</div>
+									<span>years of experiences</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Contact One Area End -->
+
+
+	<!-- Faq Area Start -->
+	<div class="faq__two section-padding">
+		<div class="container">
+			<div class="row gy-4 align-items-center">
+				<div class="col-xl-6">
+					<div class="faq__two-title">
+						<span class="subtitle-one">Ask Questions</span>
+						<h2>Unraveling IT <span class="highlighted-two">Complexities</span> – FAQs</h2>
+						<p>At Absys Technologies, we simplify the complex world of IT. Our FAQs address common concerns
+							around digital transformation, enterprise solutions, and technology integration—helping you
+							make informed decisions with confidence.</p>
+					</div>
+					<div class="award">
+						<div class="award-wrapper">
+							<div class="award-icon">
+								<i class="fas fa-award"></i>
+							</div>
+							<div class="award-count">
+								<h3 class="counter">20</h3>
+								<h3>+</h3>
+							</div>
+							<span>Years of Combined Expertise</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="faq-collapse">
+						<div class="faq-collapse-item">
+							<div class="faq-collapse-item-card active">
+								<div class="faq-collapse-item-card-header">
+									<h6>What services does Absys Technologies offer?</h6>
+									<i class="fas fa-minus-circle"></i>
+								</div>
+								<div class="faq-collapse-item-card-header-content active">
+									<p>We provide end-to-end IT services including enterprise software solutions,
+										digital transformation consulting, cloud enablement, UI/UX design, and
+										application development tailored to meet diverse business needs.</p>
+								</div>
+							</div>
+						</div>
+						<div class="faq-collapse-item">
+							<div class="faq-collapse-item-card">
+								<div class="faq-collapse-item-card-header">
+									<h6>How does Absys ensure successful project delivery?</h6>
+									<i class="fas fa-plus-circle"></i>
+								</div>
+								<div class="faq-collapse-item-card-header-content display-none">
+									<p>We follow a structured approach with agile methodologies, regular client
+										collaboration, quality assurance, and post-deployment support to ensure timely
+										and successful project outcomes.</p>
+								</div>
+							</div>
+						</div>
+						<div class="faq-collapse-item">
+							<div class="faq-collapse-item-card">
+								<div class="faq-collapse-item-card-header">
+									<h6>Can you customize solutions based on industry needs?</h6>
+									<i class="fas fa-plus-circle"></i>
+								</div>
+								<div class="faq-collapse-item-card-header-content display-none">
+									<p>Absolutely. We tailor our solutions for industries such as manufacturing,
+										logistics, retail, and aviation—aligning with specific business goals,
+										regulatory standards, and user expectations.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Faq Area End -->
+
+
+
+
+	<!-- Blog Area Start -->
+	<div class="blog__four section-padding">
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col-xl-6 col-lg-6 col-md-8 col-sm-9">
+					<div class="blog__four-title">
+						<span class="subtitle-one">Blog And news</span>
+						<h2>Cloud Productivity <span class="highlighted-two">IT Expertise</span></h2>
+						<h2> </h2>
+					</div>
+				</div>
+			</div>
+			<div class="row gy-4">
+
+				<div class="col-xl-4 col-lg-6">
+					<div class="blog__four-single-blog">
+						<div class="blog__four-single-blog-img">
+							<span class="blog__four-single-blog-date">09 Mar</span>
+							<img src="assets/img/index_page/blog1.png" alt="image">
+						</div>
+						<div class="blog__four-single-blog-content">
+							<div class="blog__four-single-blog-content-top">
+								<span>
+									<i class="far fa-user"></i>
+									by Admin
+								</span>
+								<span>
+									<i class="far fa-comment-dots"></i>
+									Comments (0)
+								</span>
+							</div>
+							<a href="blog7.html" class="blog__four-single-blog-content-title">UX/UI Designing the
+								Future Web Design</a>
+							<a href="blog7.html" class="btn-one">Read more
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-4 col-lg-6">
+					<div class="blog__four-single-blog">
+						<div class="blog__four-single-blog-img">
+							<span class="blog__four-single-blog-date">09 Mar</span>
+							<img src="assets/img/index_page/blog2.png" alt="image">
+						</div>
+						<div class="blog__four-single-blog-content">
+							<div class="blog__four-single-blog-content-top">
+								<span>
+									<i class="far fa-user"></i>
+									by Admin
+								</span>
+								<span>
+									<i class="far fa-comment-dots"></i>
+									Comments (0)
+								</span>
+							</div>
+							<a href="blog8.html" class="blog__four-single-blog-content-title">Software
+								Development Shaping the Future</a>
+							<a href="blog8.html" class="btn-one">Read more
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-xl-4 col-lg-6">
+					<div class="blog__four-single-blog">
+						<div class="blog__four-single-blog-img">
+							<span class="blog__four-single-blog-date">09 Mar</span>
+							<img src="assets/img/index_page/blog3.png" alt="image">
+						</div>
+						<div class="blog__four-single-blog-content">
+							<div class="blog__four-single-blog-content-top">
+								<span>
+									<i class="far fa-user"></i>
+									by Admin
+								</span>
+								<span>
+									<i class="far fa-comment-dots"></i>
+									Comments (0)
+								</span>
+							</div>
+							<a href="blog9.html" class="blog__four-single-blog-content-title">Smart Aviation
+								Solutions Enhancing Air Travel</a>
+							<a href="blog9.html" class="btn-one">Read more
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Blog Area End -->
+	<!-- Subscribe Area End -->
+	<div class="subscribe__one two">
+		<div class="container">
+			<div class="row justify-content-center text-center subscribe__one-content"
+				style="background-image: url(assets/img/subscribe/subscribe-two-shape-2.png);">
+				<div class="col-xl-7 col-lg-8">
+					<div class="subscribe__one-title">
+						<h2 style="color: white;">Unlock Your Potential <span class="highlighted-two"
+								style="color: rgb(1, 1, 110);">Today</span></h2>
+					</div>
+					<div class="subscribe-bottom">
+						<a href="contact.html" class="btn-two">Get in Touch
+							<i class="fas fa-arrow-right"></i>
+						</a>
+						<div class="call-box">
+							<div class="call-box-item">
+								<div class="call-box-item-icon">
+									<i class="flaticon-telephone-call"></i>
+								</div>
+								<div class="call-box-item-info">
+									<span>Message on WhatsApp</span>
+									<a href="https://wa.me/917588619361" target="_blank">(+91) 75886 19361</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Subscribe Area End -->
+
+	<!-- Footer Two Area Start -->
+	<div class="footer__two">
+		<img class="footer__two-shape" src="assets/img/shape/footer-two-bg.png" alt="image">
+		<div class="container">
+			<div class="row gy-4 justify-content-between">
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+					<div class="footer__two-widget">
+						<div class="footer__two-widget-about">
+							<a href="#"><img src="assets/img/Logo/footer-removebg-preview.png" alt="image"></a>
+							<p>We offer comprehensive IT management and consultancy services to organizations worldwide.
+							</p>
+							<div class="footer__two-widget-about-location">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+					<div class="footer__two-widget ml-85">
+						<h4>Quick Link</h4>
+						<div class="footer__two-widget-solution">
+							<ul>
+								<li><a href="service.html"><i class="far fa-chevron-double-right"></i>Service</a></li>
+								<li><a href="faq.html"><i class="far fa-chevron-double-right"></i>FAQ</a></li>
+								<li><a href="testimonial.html"><i class="far fa-chevron-double-right"></i>Articles</a>
+								</li>
+								<li><a href="about.html"><i class="far fa-chevron-double-right"></i>About Us</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+					<div class="footer__two-widget">
+						<h4>Our Services</h4>
+						<div class="footer__two-widget-solution">
+							<ul>
+								<li><a href="webdev.html"><i class="far fa-chevron-double-right"></i>Website
+										Development</a></li>
+								<li><a href="Appdevelopment.html"><i class="far fa-chevron-double-right"></i>App
+										Development</a></li>
+								<li><a href="ui.html"><i class="far fa-chevron-double-right"></i>UI/UX
+										Development</a></li>
+								<li><a href="airport.html"><i class="far fa-chevron-double-right"></i>Smart
+										Airport Solutions</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+					<div class="footer__two-widget">
+						<h4>Follow Us</h4>
+						<div class="footer__two-widget-subscribe">
+							<p>Stay ahead of the curve — get handpicked insights, trends, and stories delivered straight
+								to your inbox every week.</p>
+							<div class="footer__two-widget-social">
+								<ul>
+									<li><a href="https://www.facebook.com/engeniuspark"><i
+												class="fab fa-facebook-f"></i></a></li>
+									<li><a href="https://x.com/EngeniusPark"><i class="fab fa-twitter"></i></a></li>
+									<li><a href="https://www.linkedin.com/company/engeniuspark/posts/?feedView=all"><i
+												class="fab fa-linkedin"></i></a></li>
+									<li><a href="https://www.instagram.com/_estpl_/?hl=en"><i
+												class="fab fa-instagram"></i></a></li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright__one">
+			<div class="container">
+				<div class="row justify-content-between copyright__one-container-area">
+					<div class="col-xl-5 col-lg-6">
+						<div class="copyright__one-left">
+							<p>© Absys Technologies 2025 | All Rights Reserved</p>
+						</div>
+					</div>
+					<div class="col-xl-5 col-lg-6">
+						<div class="copyright__one-right">
+							<a href="privacypolicy.html">Privacy Policy</a>
+							<a href="contactus.html">Contact Us</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer Two Area End -->
+	<!-- Scroll Btn Start -->
+	<div class="scroll-up">
+		<svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+		</svg>
+	</div>
+	<!-- Scroll Btn End -->
+	<!-- Main JS -->
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- Counter Up JS -->
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<!-- Popper JS -->
+	<script src="assets/js/popper.min.js"></script>
+	<!-- Progressbar JS -->
+	<script src="assets/js/progressbar.min.js"></script>
+	<!-- Magnific Popup JS -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Swiper Bundle JS -->
+	<script src="assets/js/swiper-bundle.min.js"></script>
+	<!-- Slick JS -->
+	<script src="assets/js/slick.min.js"></script>
+	<!-- Isotope JS -->
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<!-- Waypoints JS -->
+	<script src="assets/js/jquery.waypoints.min.js"></script>
+	<!-- Mean Menu JS -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- Custom JS -->
+	<script src="assets/js/custom.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>
